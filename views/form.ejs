@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link href="/css/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 p-6 lg:p-0 lg:flex lg:items-center lg:justify-center lg:min-h-screen">
+  <div class="max-w-md mx-auto w-full">
+    <h1 class="text-2xl font-bold text-white mb-6"><%= title %></h1>
+
+    <form method="POST" action="/new" class="bg-gray-800 p-6 rounded shadow-sm space-y-4">
+      <div>
+        <label for="messageUser" class="block text-sm font-medium text-white">Your Name</label>
+        <input type="text" id="messageUser" name="messageUser" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded shadow-sm text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+      </div>
+
+      <div>
+        <label for="messageText" class="block text-sm font-medium text-white">Message</label>
+        <textarea id="messageText" name="messageText" rows="3" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded shadow-sm text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+      </div>
+
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+        Submit
+      </button>
+    </form>
+  </div>
+</body>
+</html>
