@@ -23,12 +23,17 @@
           </p>
 
           <p class="text-right mr-3 text-sm text-gray-400">
-            <%= message.added.toLocaleString('en-IN', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }).replace(/(am|pm)/i, match => match.toUpperCase()) %>
+            <%= 
+              message.added.getFullYear() + '-' +
+              String(message.added.getMonth() + 1).padStart(2, '0') + '-' +
+              String(message.added.getDate()).padStart(2, '0') + ' ' +
+              String(message.added.getHours()).padStart(2, '0') + ':' +
+              String(message.added.getMinutes()).padStart(2, '0') + ' UTC'
+            %>
           </p>
         </div>
       <% }); %>
     </div>
-
   </div>
 </body>
 </html>
